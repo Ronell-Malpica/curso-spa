@@ -27,12 +27,11 @@ module.exports = {
   },
   //establecer plugin
   plugins: [
-    new HtmlWebpackPlugin([
-      {
-        inject: true,
-        template: "./public/index.html",
-        filename: "./index/html",
-      },
-    ]),
+    new HtmlWebpackPlugin({
+      //aqui se pasaba un objeto y no un array con objeto adentro
+      inject: true,
+      template: "./public/index.html",
+      filename: "./index.html", //aqui se arregla la ruta
+    }),
   ],
 };
